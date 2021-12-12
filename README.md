@@ -39,7 +39,7 @@ Since the identification of a weed will ultimately result in it's removal, it is
 ```
 
 ### Quick Links
-1. [Final Analysis Notebook](notebooks/report/final_model.ipynb)
+1. [Final Analysis Notebook](notebooks/final/final_model.ipynb)
 2. [Presentation Slides](reports/presentation.pdf)
 
 ### Setup Instructions
