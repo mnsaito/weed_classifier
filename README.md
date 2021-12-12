@@ -65,20 +65,13 @@ I ultimately collected 2812 photos of perennials and 2990 photos of weeds.  I ra
 
 Because the training of convolutional neural networks improves with the amount of data used to train the model, I used various data augmentation techniques to artificially expand the size of my training dataset.  A range of techniques were including:
 - Rotate the images +/- 30 degrees
+- Horizontal flip
 - Zoom in and out
 - Shift left and right
 - Shift up and down
-- Horizontal flip
 - Adjust brightness
 
-<p align = "center">
-    <img src = "reports/images/original_plant.png" />
-    <img src = "reports/images/rotate_30.png" />
-</p>
-
-![Alt-Text](reports/images/original_plant.png "Original") ![Alt-Text](reports/images/rotate_30.png "Rotate 30 Degrees") ![alt-text-3](reports/images/rotate_neg_30.png "Rotate -30 Degrees")
-
-![zoom_in](reports/images/zoom_in.png)![Zoom_out](reports/images/zoom_out.png)![shift_left](reports/images/shift_left.png)![shift_down](reports/images/shift_down.png)![Horizontal Flip](reports/images/flip.png)
+![](reports/images/augment_1.png) ![](reports/images/augment_2) ![](reports/images/augment_3)
 
 ### Visual Inspection
 
