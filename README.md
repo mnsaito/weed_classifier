@@ -70,7 +70,11 @@ Because the training of convolutional neural networks improves with the amount o
 - Shift up and down
 - Horizontal flip
 - Adjust brightness
-![Original](reports/images/original_plant.png)![Rotate_30](reports/images/rotate_30.png)![Rotate_neg_30](reports/images/rotate_neg_30.png)![zoom_in](reports/images/zoom_in.png)![Zoom_out](reports/images/zoom_out.png)![shift_left](reports/images/shift_left.png)![shift_down](reports/images/shift_down.png)![Horizontal Flip](reports/images/flip.png)
+Original    |   Rotate 30 degrees   |   Rotate -30 degrees
+:----------:|:---------------------:|:--------------------:
+![Original](reports/images/original_plant.png)  |   ![Rotate_30](reports/images/rotate_30.png)  \   ![Rotate_neg_30](reports/images/rotate_neg_30.png)
+
+![zoom_in](reports/images/zoom_in.png)![Zoom_out](reports/images/zoom_out.png)![shift_left](reports/images/shift_left.png)![shift_down](reports/images/shift_down.png)![Horizontal Flip](reports/images/flip.png)
 
 ### Visual Inspection
 
