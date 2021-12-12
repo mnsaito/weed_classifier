@@ -76,9 +76,14 @@ Because the training of convolutional neural networks improves with the amount o
 ### Visual Inspection
 
 Below are multiple examples comparing perennials (left) with weeds (right):
-- The perennials appear to be more colorful than the weeds
-- The perennials also appear to have larger leaves with more texture than the weeds
-![Plants Compared](reports/images/plants_compared_0.png)
+
+![compare plants](reports/images/plants_compared_2.png)
+
+The perennials appear to be more colorful than the weeds
+
+![Plants Compared](reports/images/plants_compared_3.png)
+
+The perennials also appear to have larger leaves with more texture than the weeds
 
 ## Methods
 ### Model Development
