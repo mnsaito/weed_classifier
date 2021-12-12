@@ -61,18 +61,6 @@ I included the weed photos that were available from the Preen website in my data
 
 I ultimately collected 2812 photos of perennials and 2990 photos of weeds.  I randomly selected 10% of both the perennials and the weeds to include in my test dataset (see [Split Test and Training Notebook](notebooks/exploratory/datasets-split_test_&_training.ipynb)).
 
-### Preparation
-
-Because the training of convolutional neural networks improves with the amount of data used to train the model, I used various data augmentation techniques to artificially expand the size of my training dataset.  A range of techniques were including:
-- Rotate the images +/- 30 degrees
-- Horizontal flip
-- Zoom in and out
-- Shift left and right
-- Shift up and down
-- Adjust brightness
-
-![](reports/images/augment_1.png) ![](reports/images/augment_2.png) ![](reports/images/augment_3.png)
-
 ### Visual Inspection
 
 Below are multiple examples comparing perennials (left) with weeds (right):
@@ -84,6 +72,18 @@ The perennials appear to be more colorful than the weeds
 ![Plants Compared](reports/images/plants_compared_3.png)
 
 The perennials also appear to have larger leaves with more texture than the weeds
+
+### Data Augmentation
+
+Because the training of convolutional neural networks improves with the amount of data used to train the model, I used various data augmentation techniques to artificially expand the size of my training dataset.  A range of techniques were including:
+- Rotate the images +/- 30 degrees
+- Horizontal flip
+- Zoom in and out
+- Shift left and right
+- Shift up and down
+- Adjust brightness
+
+![](reports/images/augment_1.png) ![](reports/images/augment_2.png) ![](reports/images/augment_3.png)
 
 ## Methods
 ### Model Development
