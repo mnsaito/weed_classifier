@@ -70,6 +70,8 @@ Because the training of convolutional neural networks improves with the amount o
 - Shift up and down
 - Horizontal flip
 - Adjust brightness
+
+
 Original    |   Rotate 30 degrees   |   Rotate -30 degrees
 :----------:|:---------------------:|:--------------------:
 ![Original](reports/images/original_plant.png)  |   ![Rotate_30](reports/images/rotate_30.png)  \   ![Rotate_neg_30](reports/images/rotate_neg_30.png)
