@@ -72,7 +72,7 @@ Because the training of convolutional neural networks improves with the amount o
 - Adjust brightness
 
 
-![alt-text-1](reports/images/original_plant.png)![alt-text-2](reports/images/rotate_30.png)![alt-text-3](reports/images/rotate_neg_30.png)
+![alt-text-1](reports/images/original_plant.png "Original") ![alt-text-2](reports/images/rotate_30.png "Rotate 30 Degrees") ![alt-text-3](reports/images/rotate_neg_30.png "Rotate -30 Degrees")
 
 ![zoom_in](reports/images/zoom_in.png)![Zoom_out](reports/images/zoom_out.png)![shift_left](reports/images/shift_left.png)![shift_down](reports/images/shift_down.png)![Horizontal Flip](reports/images/flip.png)
 
