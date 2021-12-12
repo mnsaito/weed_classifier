@@ -102,24 +102,25 @@ Finally, I tried deeper neural networks having three convolutional layers and fi
 - Five dense layers with a 0.2 dropout layer after the first dense layer
 
 ## Results
-- As depicted below
 
 ![loss](reports/images/final_loss_plot.png)
 
-    - the validation loss did not decrease with additional epochs.  In other words, the error of the output layer during backpropagation did not decrease with additional training.
+The validation loss did not decrease with additional epochs.  In other words, the error of the output layer during backpropagation did not decrease with additional training.
 
 ![accuracy](reports/images/final_acc_plot.png)
 
-    - the validation accuracy appears to fluctuate around 65%
+The validation accuracy appears to fluctuate around 65%
 
 ![precision](reports/images/final_prec_plot.png)
 
-    - the validation precision does not increase with additional training
+The validation precision does not increase with additional training
 
 
 ### Results on Test Data
-- The metrics below indicate 52% accuracy and a 54% precision score on the test data
+
 ![confusion matrix](reports/images/final_confusion_matrix.png)
+
+The metrics below indicate 52% accuracy and a 54% precision score on the test data
 
 ### Lime
 - I implemented a package called [lime](https://github.com/marcotcr/lime) (local interpretable model-agnostic explanations) to illustrate the areas on the plants that the model focused on to classify the plant as a perennial or as a weed
