@@ -120,7 +120,7 @@ The validation precision does not increase with additional training
 
 ![confusion matrix](reports/images/final_confusion_matrix.png)
 
-The metrics below indicate 52% accuracy and a 54% precision score on the test data
+The metrics indicate 48% accuracy and a 50% precision score on the test data
 
 ### Lime
 - I implemented a package called [lime](https://github.com/marcotcr/lime) (local interpretable model-agnostic explanations) to illustrate the areas on the plants that the model focused on to classify the plant as a perennial or as a weed
@@ -128,21 +128,36 @@ The metrics below indicate 52% accuracy and a 54% precision score on the test da
 - Unfortunately, the model does focus on the plants to classify whether the plant is a perennial or a weed
 ![lime perennial](reports/images/final_lime_peren.png)![lime weed](reports/images/final_lime_weed.png)
 
-### Transfer Learning Evaluation
+## Transfer Learning Evaluation
 I implemented a pretrained VGG model to determine how well a pretrained model performs on my dataset
-- the validation loss did not decrease with additional epochs.
-- the validation accuracy appears to fluctuate around 73%
-![loss](reports/images/vgg_loss_plot.png)![accuracy](reports/images/vgg_acc_plot.png)
 
-The pretrained model performs better on the validation data than my model by approximately 8%
+![loss](reports/images/vgg_loss_plot.png)
+
+The validation loss did not decrease with additional epochs
+
+![accuracy](reports/images/vgg_acc_plot.png)
+
+The validation accuracy appears to fluctuate around 73%. The pretrained model performs better on the validation data than my model by approximately 8%.
+
+### Results on Test Data
+
+![confusion matrix](reports/images/vgg_confusion_matrix.png)
+
+The metrics indicate 50% accuracy and a 52% precision score on the test data
+
+### Lime
+
+![lime perennial](reports/images/vgg_lime_peren.png)![lime weed](reports/images/vgg_lime_weed.png)
+
+The pretrained model also does focus on the plants to classify whether the plant is a perennial or a weed
 
 ## Conclusion
 - I created a convolutional neural network model that classifies plants as either perennials or weeds.
 - The model is not performing very well
-    - The accuracy of the model on the test dataset is 52% with a precision of 54% 
+    - The accuracy of the model on the test dataset is 48% with a precision of 50% 
     - The model is not classifying the images by focusing solely on the plants
 - The pretrained VGG-16 model also did not perform well on the dataset
-    - Though the accuracy on the validation dataset was better, the performance on the test dataset was no better than my model
+    - Though the accuracy on the validation dataset was better, the performance on the test dataset was only slightly better than my model
     - The accuracy of the pretrained model on the test dataset is 50% with a precision of 52% 
     - The model is not classifying the images by focusing solely on the plants
 
