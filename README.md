@@ -103,10 +103,19 @@ Finally, I tried deeper neural networks having three convolutional layers and fi
 
 ## Results
 - As depicted below
+
+![loss](reports/images/final_loss_plot.png)
+
     - the validation loss did not decrease with additional epochs.  In other words, the error of the output layer during backpropagation did not decrease with additional training.
+
+![accuracy](reports/images/final_acc_plot.png)
+
     - the validation accuracy appears to fluctuate around 65%
+
+![precision](reports/images/final_prec_plot.png)
+
     - the validation precision does not increase with additional training
-![loss](reports/images/final_loss_plot.png)![accuracy](reports/images/final_acc_plot.png)![precision](reports/images/final_prec_plot.png)
+
 
 ### Results on Test Data
 - The metrics below indicate 52% accuracy and a 54% precision score on the test data
