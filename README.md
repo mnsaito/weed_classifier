@@ -72,9 +72,8 @@ Because the training of convolutional neural networks improves with the amount o
 - Adjust brightness
 
 <p align = "center">
-    <img src = "reports/images/original_plant.png" width = "460" />
-    <img src = "reports/images/rotate_30.png" width = "460" />
-    <img src = "reports/images/rotate_neg_30.png" width = "425" />
+    <img src = "reports/images/original_plant.png" />
+    <img src = "reports/images/rotate_30.png" />
 </p>
 
 ![Alt-Text](reports/images/original_plant.png "Original") ![Alt-Text](reports/images/rotate_30.png "Rotate 30 Degrees") ![alt-text-3](reports/images/rotate_neg_30.png "Rotate -30 Degrees")
