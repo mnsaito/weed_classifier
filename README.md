@@ -71,7 +71,7 @@ Because the training of convolutional neural networks improves with the amount o
 - Shift up and down
 - Adjust brightness
 
-![](reports/images/augment_1.png) ![](reports/images/augment_2) ![](reports/images/augment_3)
+![](reports/images/augment_1.png) ![](reports/images/augment_2.png) ![](reports/images/augment_3.png)
 
 ### Visual Inspection
 
