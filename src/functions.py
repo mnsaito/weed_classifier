@@ -9,8 +9,7 @@ import os
 
 from PIL import Image
 
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from sklearn.metrics import accuracy_score, precision_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, accuracy_score, precision_score
 
 # Lime Imports
 import lime
@@ -18,14 +17,14 @@ from lime import lime_image
 from skimage.segmentation import mark_boundaries
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
-store_path = os.path.join(os.pardir, os.pardir, 'reports', 'figures')
+store_path = os.path.join(os.pardir, os.pardir, 'reports', 'images')
 
 # Compare perennials with weeds, randomly selected from training data
-def compare_plants():
+def compare_plants(number):
     data_path = os.path.join(os.pardir, os.pardir, 'data', 'train')
     perennial_path = os.path.join(data_path, 'perennials')
     weed_path = os.path.join(data_path, 'weeds')
-    plants_compared = os.path.join(store_path, 'plants_compared')
+    plants_compared = os.path.join(store_path, 'plants_compared_' + number)
     
     perennial_file = random.choice(os.listdir(perennial_path))
     perennial_img = mpimg.imread(os.path.join(perennial_path, perennial_file))
@@ -42,16 +41,14 @@ def compare_plants():
     plt.savefig(plants_compared)
     return
 
-# Function to plot loss, accuracy and precision during training
-def visualize_training_results(results):
+# Function to plot loss and accuracy during training
+def visualize_training_results(results, name):
     """Input results = model.fit
-    requires both accuracy and precision as metrics
-     
     """
     
-    loss_plot = os.path.join(store_path, 'loss_plot')
-    acc_plot = os.path.join(store_path, 'acc_plot')
-    prec_plot = os.path.join(store_path, 'prec_plot')
+    loss_plot = os.path.join(store_path, name + '_loss_plot')
+    acc_plot = os.path.join(store_path, name + '_acc_plot')
+    prec_plot = os.path.join(store_path, name + '_prec_plot')
 
     history = results.history
     plt.figure()
@@ -73,23 +70,24 @@ def visualize_training_results(results):
     plt.ylabel('Accuracy')
     plt.savefig(acc_plot)
     plt.show()
-        
-    plt.figure()
-    plt.plot(history['val_precision'])
-    plt.plot(history['precision'])
-    plt.legend(['val_precision', 'precision'])
-    plt.title('Precision')
-    plt.xlabel('Epochs')
-    plt.ylabel('Precision')
-    plt.savefig(prec_plot)
-    plt.show();
+    
+    if 'precision' in list(history.keys()):
+        plt.figure()
+        plt.plot(history['val_precision'])
+        plt.plot(history['precision'])
+        plt.legend(['val_precision', 'precision'])
+        plt.title('Precision')
+        plt.xlabel('Epochs')
+        plt.ylabel('Precision')
+        plt.savefig(prec_plot)
+        plt.show();
     return
-
-def create_confusion_matrix(model, generator):
+        
+def create_confusion_matrix(model, generator, name):
     """Input model and generator
     Creates confusion matrix     
     """
-    c_matrix = os.path.join(store_path, 'confusion_matrix')
+    c_matrix = os.path.join(store_path, name + '_confusion_matrix')
     preds = (model.predict(generator) > 0.5).astype('int32')
     true_labels = generator.classes
     labels = list(generator.class_indices.keys())
@@ -129,7 +127,7 @@ def get_lime(model, generator, batch_no, plant, path):
     plt.show();
     return
 
-def display_lime(model, generator):
+def display_lime(model, generator, name):
     """Input model and generator
     Displays Lime for 3 random x-rays selected from generator using model
     """
@@ -144,13 +142,13 @@ def display_lime(model, generator):
             if generator[0][1][batch_no] == 0:
                 plant = 'Perennial'
                 peren_flag = 1
-                path = os.path.join(store_path, 'lime_peren')
+                path = os.path.join(store_path, name + '_lime_peren')
                 get_lime(model, generator, batch_no, plant, path)
         elif weed_flag == 0:
             if generator[0][1][batch_no] == 1:
                 plant = 'Weed'
                 weed_flag = 1
-                path = os.path.join(store_path, 'lime_weed')
+                path = os.path.join(store_path, name + '_lime_weed')
                 get_lime(model, generator, batch_no, plant, path)
     return
 
