@@ -71,9 +71,9 @@ Because the training of convolutional neural networks improves with the amount o
 - Horizontal flip
 - Adjust brightness
 
-<p float = "left">
-    <img src = "reports/images/original_plant.png" width = "425" />
-    <img src = "reports/images/rotate_30.png" width = "425" />
+<p align = "center">
+    <img src = "reports/images/original_plant.png" width = "460" />
+    <img src = "reports/images/rotate_30.png" width = "460" />
     <img src = "reports/images/rotate_neg_30.png" width = "425" />
 </p>
 
