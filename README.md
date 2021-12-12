@@ -26,8 +26,6 @@ Since the identification of a weed will ultimately result in it's removal, it is
 │       ├── perennials    <-- Perennials in test data
 │       └── weeds         <-- Weeds in training data
 │
-├── final_model           <-- Final model
-│
 ├── notebooks             <-- Jupyter Notebooks for exploration and presentation
 │   ├── exploratory       <-- Unpolished exploratory data analysis (EDA) notebooks
 │   └── report            <-- Polished final notebook
