@@ -22,7 +22,7 @@ Since the identification of a weed will ultimately result in it's removal, it is
 │   ├── train             <-- Training data used for modeling
 │   │   ├── perennials    <-- Perennials in training data
 │   │   └── weeds         <-- Weeds in training data
-│   └──── test            <-- Original test data (before moving 100 images to vaidation)
+│   └──── test            <-- Test data
 │       ├── perennials    <-- Perennials in test data
 │       └── weeds         <-- Weeds in training data
 │
