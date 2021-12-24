@@ -44,7 +44,7 @@ Since the identification of a weed will ultimately result in it's removal, it is
 
 To create a replica of the environment needed to run my notebook, run: 
 
-`conda env create --file xrays.yml`
+`conda env create --file weeds.yml`
 
 ## Data
 ### Compilation
