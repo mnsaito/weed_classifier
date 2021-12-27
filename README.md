@@ -18,6 +18,8 @@ Since the identification of a weed will ultimately result in it's removal, it is
 ├── README.md             <-- Main README file explaining the project's business case,
 │                             methodology, and findings
 │
+├── weeds.yml             <-- Environment to run notebook
+│
 ├── data                  <-- Data in jpeg format
 │   ├── train             <-- Training data used for modeling
 │   │   ├── perennials    <-- Perennials in training data
@@ -27,8 +29,9 @@ Since the identification of a weed will ultimately result in it's removal, it is
 │       └── weeds         <-- Weeds in test data
 │
 ├── notebooks             <-- Jupyter Notebooks for exploration and presentation
+│   ├── scraping          <-- Data scraping notebooks
 │   ├── exploratory       <-- Unpolished exploratory data analysis (EDA) notebooks
-│   └── report            <-- Polished final notebook
+│   └── final             <-- Polished final notebook
 │
 ├── reports               <-- Generated analysis (including presentation.pdf)
 │   └── images            <-- Images used in reporting
@@ -53,11 +56,11 @@ I gathered a list of best-performing perennials in the midwest from https://www.
 
 I included the weed photos that were available from the Preen website in my dataset (see [Create Plant List & Initial Scraping Notebook](notebooks/exploratory/datasets-create_lists_&_initial_scraping.ipynb)).  I also used three additional sources to compile the photos for my dataset:
 
-1.  https://garden.org collects and categorizes photographs from its members.  The plants in some of these photos were in the background (e.g., the primary focus of the photo may have been a bee instead of the plant), so some of these photos includes misleading information.   (See [Create Plant List & Initial Scraping Notebook](notebooks/exploratory/datasets-create_lists_&_initial_scraping.ipynb).)
-2.  The Missouri Botanical Gardens (https://www.missouribotanicalgarden.org) provides photos of various plants, but does not include any photos of weeds.  (See [Scrape Perennials Notebook](notebooks/exploratory/datasets-scrape_from_missouri_botanical_garden.ipynb).)  The Missouri Botanical Gardens referred to the University of Massachusetts Amherst for all weed photos.
-3.  The University of Massachusetts Amherst (http://extension.umass.edu/landscape/weed-herbarium/) provides photos of various weeds in its Weed Herbarium.  (See [Scrape UMass Weeds Notebook](notebooks/exploratory/datasets-scrape_weeds_from_UMass.ipynb).)
+1.  https://garden.org collects and categorizes photographs from its members.  The plants in some of these photos were in the background (e.g., the primary focus of the photo may have been a bee instead of the plant), so some of these photos includes misleading information.   (See [Create Plant List & Initial Scraping Notebook](notebooks/scraping/create_lists_and_initial_scraping.ipynb).)
+2.  The Missouri Botanical Gardens (https://www.missouribotanicalgarden.org) provides photos of various plants, but does not include any photos of weeds.  (See [Scrape Perennials Notebook](notebooks/scraping/scrape_from_missouri_botanical_garden.ipynb).)  The Missouri Botanical Gardens referred to the University of Massachusetts Amherst for all weed photos.
+3.  The University of Massachusetts Amherst (http://extension.umass.edu/landscape/weed-herbarium/) provides photos of various weeds in its Weed Herbarium.  (See [Scrape UMass Weeds Notebook](notebooks/scraping/scrape_weeds_from_UMass.ipynb).)
 
-I ultimately collected 2812 photos of perennials and 2990 photos of weeds.  I randomly selected 10% of both the perennials and the weeds to include in my test dataset (see [Split Test and Training Notebook](notebooks/exploratory/datasets-split_test_&_training.ipynb)).
+I ultimately collected 2812 photos of perennials and 2990 photos of weeds.  I randomly selected 10% of both the perennials and the weeds to include in my test dataset (see [Split Test and Training Notebook](notebooks/scraping/datasets-split_test_and_training.ipynb)).
 
 ### Visual Inspection
 
